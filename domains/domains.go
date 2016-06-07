@@ -39,6 +39,18 @@ type ServerConfig struct {
 	Pass struct {
 		Mpass string
 	}
+	Main struct {
+		Locale     string
+		Themes     string
+		Changefreq string
+	}
+	Dirs struct {
+		Rootdir         string
+		Rootdirm        string
+		Backendrootdir  string
+		Dbdir           string
+		Rssresorsesfile string
+	}
 }
 
 type BlogItem struct {
