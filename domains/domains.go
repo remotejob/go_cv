@@ -47,6 +47,7 @@ type ServerConfig struct {
 	Dirs struct {
 		Rootdir         string
 		Rootdirm        string
+		Rootbng         string
 		Backendrootdir  string
 		Dbdir           string
 		Rssresorsesfile string

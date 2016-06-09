@@ -73,8 +73,6 @@ func Generate(keywords []string, phrases []string) domains.Contents {
 	prtitle := prtitlegen.Generate(keywords)
 	title := comutils.UpcaseInitial(strings.Join(prtitle, " "))
 	moto := comutils.UpcaseInitial(phrases[rand.Intn(len(phrases))]) + "."
-//	fmt.Println(prtitle)
-//	fmt.Println(moto)
 
 	var buffer bytes.Buffer
 	prefixLen := 1

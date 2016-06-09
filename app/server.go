@@ -19,6 +19,7 @@ import (
 
 var rootdir = ""
 var rootdirm = ""
+var rootdirbng = ""
 var backendrootdir = ""
 var locale = ""
 var themes = ""
@@ -26,13 +27,14 @@ var themes = ""
 func init() {
 
 	var cfg domains.ServerConfig
-	if err := gcfg.ReadFileInto(&cfg, "config.gcfg"); err != nil {
+	if err := gcfg.ReadFileInto(&cfg, "/home/juno/neonworkspace/go_cv/config.gcfg"); err != nil {
 		log.Fatalln(err.Error())
 
 	} else {
 
 		rootdir = cfg.Dirs.Rootdir
 		rootdirm = cfg.Dirs.Rootdirm
+		rootdirbng= cfg.Dirs.Rootbng		
 		locale = cfg.Main.Locale
 		themes = cfg.Main.Themes
 		backendrootdir = cfg.Dirs.Backendrootdir
@@ -44,7 +46,8 @@ func init() {
 func startInit(c *web.C, h http.Handler) http.Handler {
 	fn := func(w http.ResponseWriter, r *http.Request) {
 		c.Env["rootdir"] = rootdir
-		c.Env["rootdirm"] = rootdirm		
+		c.Env["rootdirm"] = rootdirm
+		c.Env["rootdirbng"] = rootdirbng 	
 		c.Env["locale"] = locale
 		c.Env["themes"] = themes
 		c.Env["backendrootdir"] = backendrootdir

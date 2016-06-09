@@ -17,13 +17,11 @@ func check(e error) {
 
 func Get(sitemapfile string) []domains.SitemapObj {
 
-//	fmt.Println(sitemapfile)
 	dat, err := ioutil.ReadFile(sitemapfile)
 	check(err)
 
 	var sitemap domains.Pages
 	xml.Unmarshal(dat, &sitemap)
-//	fmt.Println(sitemap.Pages)
 
 	var sitemapObjs []domains.SitemapObj
 
@@ -33,7 +31,7 @@ func Get(sitemapfile string) []domains.SitemapObj {
 		t, err := time.Parse(layout, page.Lastmod)
 		check(err)
 		duration := time.Since(t)
-//		fmt.Println(int(duration.Hours()))
+
 		sitemapObj := domains.SitemapObj{page.Changefreq, duration.Hours(),page.Loc,page.Lastmod}
 		
 		sitemapObjs =append(sitemapObjs,sitemapObj)

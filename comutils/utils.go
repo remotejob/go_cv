@@ -5,8 +5,6 @@ import (
 	"encoding/gob"
 	"math/rand"
 	"unicode"
-	
-//    "time"
 )
 
 func UpcaseInitial(str string) string {
