@@ -27,7 +27,7 @@ var themes = ""
 func init() {
 
 	var cfg domains.ServerConfig
-	if err := gcfg.ReadFileInto(&cfg, "/home/juno/neonworkspace/go_cv/config.gcfg"); err != nil {
+	if err := gcfg.ReadFileInto(&cfg, "config.gcfg"); err != nil {
 		log.Fatalln(err.Error())
 
 	} else {
