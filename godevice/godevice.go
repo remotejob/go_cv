@@ -51,5 +51,10 @@ func GetType(r *http.Request) string {
 	if strings.Contains(userAgent, "BingPreview") {
 		deviceType = "Bing"
 	}
+	
+	if strings.Contains(userAgent, "yahoo") {
+		deviceType = "Bing"
+	}	
+	
 	return deviceType
 }
