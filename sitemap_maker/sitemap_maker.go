@@ -3,7 +3,6 @@ package main
 import (
 	"database/sql"
 	"github.com/remotejob/go_cv/domains"
-//	"flag"
 	"fmt"
 	_ "github.com/mxk/go-sqlite/sqlite3"
 	//	"io/ioutil"
@@ -21,12 +20,6 @@ import (
 	"time"
 )
 
-//var localeFlag = flag.String("locale", "", "must be fi_FI/en_US/it_IT")
-//var themesFlag = flag.String("themes", "", "must be porno/finance/fortune...")
-//var dblocFlag = flag.String("dbloc", "", "must be somthing like en_US_programming.db")
-//var contentsdirFlag = flag.String("contentsdir", "", "must dir location contents files")
-//var linksdirFlag = flag.String("linksdir", "", "must dir location links files")
-//var mapsdirFlag = flag.String("mapsdir", "", "must dir location sitemaps files")
 
 var rootdir = ""
 var backendrootdir = ""
